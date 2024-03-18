@@ -1,7 +1,7 @@
 import './NavBar.css';
 import logoBlack from './assets/logoBlack.png';
 import CartWidget from '../CartWidget/CartWidget.jsx';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
@@ -14,9 +14,27 @@ const NavBar = () => {
 
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav nav-underline">
-                        <li ><Link to='/category/correas' className='nav-link link-light'>Correas</Link></li>
-                        <li><Link to='/category/collares' className='nav-link link-light'>Collares</Link></li>
-                        <li><Link to='/category/pretales' className='nav-link link-light'>Pretales</Link></li>
+                        <li ><NavLink 
+                            to='/category/correas' 
+                            className='nav-link link-light'
+                            activeclassname="link-underline-light">
+                                Correas
+                            </NavLink>
+                        </li>
+                        <li><NavLink 
+                            to='/category/collares' 
+                            className='nav-link link-light'
+                            activeclassname="link-underline-light">
+                                Collares
+                            </NavLink>
+                        </li>
+                        <li><NavLink 
+                            to='/category/pretales' 
+                            className='nav-link link-light'
+                            activeclassname="link-underline-light">
+                                Pretales
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>

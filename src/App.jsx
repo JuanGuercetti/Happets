@@ -4,8 +4,14 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Button from './components/Button/Button';
+import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
+  const handleOnAdd = (count) => {
+    console.log('Items added to cart: ', count)
+  }
+
   return (
     <>
       <BrowserRouter>
