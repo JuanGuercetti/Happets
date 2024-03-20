@@ -25,6 +25,13 @@ const ItemListContainer = ({ greeting }) => {
             <h1 className='title-main'>{ greeting }</h1>
 
             <ItemList products={ products }/>
+
+            {/* {
+                products.length === 0 ? 
+                    <ItemList products={ products }/>
+                    :
+                    <h1 className='title-main'>Cargando...</h1>
+            } Esto no funciona   */}
         </div>
     )
 }
