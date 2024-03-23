@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const CartContext = createContext();
 // Este objeto creado, devuelve un provider con el cual debo envolver a todos los componentes que quiero que
@@ -19,10 +19,7 @@ export const CartProvider = ({ children }) => {
     
     const addItem = (productToAdd) => {
         !isInCart(productToAdd.id) ?
-            ( 
-            setCart(prev => [...prev, productToAdd]),
-            console.log(cart) 
-            )
+            setCart(prev => [...prev, productToAdd])
             : console.log("The product is already on the cart")
     }
 
@@ -46,9 +43,10 @@ export const CartProvider = ({ children }) => {
     }
 
     const getTotalQuantity = () => {
-        let totalQuantity = 0;
-        cart.forEach(prod => totalQuantity =+ prod.quantity);
-        return totalQuantity;
+        let acumulador = 0
+        console.log(cart)
+        cart.forEach(prod => {acumulador =+ prod.quantity})
+        return acumulador
     }
     const totalQuantity = getTotalQuantity();
 

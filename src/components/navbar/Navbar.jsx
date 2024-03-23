@@ -5,7 +5,6 @@ import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <>
         <nav className="navbar navbar-expand sticky-top">
             <div className="container-fluid">
                 <Link to='/' className="navbar-brand">
@@ -41,7 +40,6 @@ const NavBar = () => {
 
             <CartWidget />
         </nav>
-        </>
     )
 }
 

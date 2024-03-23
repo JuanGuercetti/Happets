@@ -7,9 +7,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 
 function App() {
-  // const handleOnAdd = (count) => {
-  //   console.log('Items added to cart: ', count)
-  // }
 
   return (
     <>
