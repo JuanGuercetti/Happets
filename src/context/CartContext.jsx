@@ -45,7 +45,8 @@ export const CartProvider = ({ children }) => {
     const getTotalQuantity = () => {
         let acumulador = 0
         console.log(cart)
-        cart.forEach(prod => {acumulador =+ prod.quantity})
+        cart.forEach(prod => {acumulador += prod.quantity})
+        console.log(acumulador)
         return acumulador
     }
     const totalQuantity = getTotalQuantity();

@@ -6,6 +6,7 @@ import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { categoryId } = useParams();
 
     useEffect(() => {
@@ -14,9 +15,11 @@ const ItemListContainer = ({ greeting }) => {
         asyncFunction(categoryId)
         .then(res => {
             setProducts(res);
+            setLoading(false);
         })
         .catch(err => {
             console.log('Data loading error :' + error);
+            setLoading(false);
         })
     }, [categoryId])
 
@@ -24,14 +27,7 @@ const ItemListContainer = ({ greeting }) => {
         <div>
             <h1 className='title-main'>{ greeting }</h1>
 
-            <ItemList products={ products }/>
-
-            {/* {
-                products.length === 0 ? 
-                    <ItemList products={ products }/>
-                    :
-                    <h1 className='title-main'>Cargando...</h1>
-            } Esto no funciona   */}
+            <ItemList products={ products } loading={ loading }/>
         </div>
     )
 }
