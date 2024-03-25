@@ -7,8 +7,8 @@ const ItemList = ( { products, loading }) => {
             <div className='row'>
                 {
                     loading ? (
-                        <div className="">
-                            <h1 className='title-main'>Cargando...</h1>
+                        <div className="spinner-container">
+                            <h2 className='title-main'>Actulizado lista de productos...</h2>
                             <div className="spinner-border text-success" role="status">
                                 <span className="visually-hidden">Loading...</span>
                             </div>

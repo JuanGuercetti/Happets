@@ -3,3 +3,9 @@
     border: 5px dotted #1e975f;
     padding: 30px;
 }
+
+.spinner-container h2 {
+    display: inline;
+    text-align: center;
+    margin-right: 20px;
+}

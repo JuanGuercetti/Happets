@@ -1,0 +1,11 @@
+.cart-container {
+    background-color: #1e975f;
+    margin: 50px;
+}
+
+.cart-title {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    color: #fff;
+}

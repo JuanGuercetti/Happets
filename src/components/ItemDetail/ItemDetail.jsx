@@ -14,12 +14,9 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
 
     const handleOnAdd = (quantity) => {
         setFinish(true)
-
         const objProductToAdd = {
             id, name, price, quantity
         }
-        console.log(objProductToAdd)
-
         setQuantity(quantity)
         addItem(objProductToAdd)
     }
