@@ -15,7 +15,7 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
     const handleOnAdd = (quantity) => {
         setFinish(true)
         const objProductToAdd = {
-            id, name, price, quantity
+            id, name, img, price, quantity
         }
         setQuantity(quantity)
         addItem(objProductToAdd)
@@ -29,7 +29,7 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
                     <h5 className="card-title"> { name } </h5>
                     <p className="card-text"> { description } </p>
                     <p className="card-text">Precio: ${ price } ARS </p>
-                    <footer>              
+                    <footer className='card-footer'>              
                         {
                             finish === false ? (
                                 <ItemCount onAdd={ handleOnAdd } stock={ stock }/>
