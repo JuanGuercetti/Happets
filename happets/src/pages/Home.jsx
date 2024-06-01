@@ -1,5 +1,15 @@
+import { Heading, Container } from '@chakra-ui/react'
+
 export default function Home() {
     return (
-        <h1>Bienvenidos a Happets!</h1>
+        <Container>
+            <Heading 
+                size='xl' 
+                textAlign='center' 
+                mt='10vh'
+                color='green.200'>
+                    Bienvenidos a Happets!
+            </Heading>        
+        </Container>
     )
 }

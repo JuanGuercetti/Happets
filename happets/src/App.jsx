@@ -17,6 +17,7 @@ import Pretales from './pages/Pretales'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
+      {/* Sacar RooyLayout y que vaya directo al Home.jsx? */}
       <Route index element={<Home />} />
       <Route path="collares" element={<Collares />} />
       <Route path="correas" element={<Correas />} />
