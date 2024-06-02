@@ -2,7 +2,7 @@ import { Heading, Container } from '@chakra-ui/react'
 
 export default function Home() {
     return (
-        <Container>
+        <Container h="100vh">
             <Heading 
                 size='xl' 
                 textAlign='center' 
