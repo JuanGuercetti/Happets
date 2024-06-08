@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 export default function Navbar() {
     return (
          <Flex as="nav" p="20px" alignItems="center" bg='green.200'>
-            <Heading mr="20px" color='green.400'>Happets</Heading>
+            <Heading mr="40px" color='green.400'>Happets</Heading>
 
             <HStack spacing="20px">
                 <NavLink to='/collares'>Collares</NavLink> 
