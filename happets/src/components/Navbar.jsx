@@ -1,5 +1,6 @@
-import { Flex, Heading, Box, Text, Button, HStack } from "@chakra-ui/react"
+import { Button, Flex, Heading, HStack, Spacer } from "@chakra-ui/react"
 import { NavLink } from "react-router-dom"
+import CartWidget from "./CartWidget"
 
 export default function Navbar() {
     return (
@@ -12,6 +13,10 @@ export default function Navbar() {
                 <NavLink to='/ids'>Identificaciones</NavLink>
                 <NavLink to='/pretales'>Pretales</NavLink>
             </HStack>
+
+            <Spacer/>
+
+            <CartWidget/>
         </Flex>
     )
 }
