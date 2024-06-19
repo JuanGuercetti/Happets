@@ -6,7 +6,7 @@ export default function CartWidget() {
     return (
         <Button colorScheme="green">
             <Flex direction="column" align="center">
-                <Box as={IoCartOutline} size="30px" />
+                <Box as={ IoCartOutline } size="30px" />
                 0
             </Flex>
         </Button>

@@ -1,4 +1,4 @@
-import { Heading, Container } from '@chakra-ui/react'
+import { Heading, Container, Text } from '@chakra-ui/react'
 
 export default function Home() {
     return (
@@ -9,7 +9,12 @@ export default function Home() {
                 mt='10vh'
                 color='green.200'>
                     Bienvenidos a Happets!
-            </Heading>        
+            </Heading>
+
+            <Text>
+                Hola soy el home
+            </Text>
+
         </Container>
     )
 }

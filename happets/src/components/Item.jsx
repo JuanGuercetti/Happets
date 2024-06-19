@@ -16,7 +16,7 @@ export default function Item({ id, name, description, img }) {
             <Divider/>
 
             <CardFooter >
-                <Button colorScheme='green'>Agregar al carrito</Button>
+                <Button colorScheme='green'>Ver detalle</Button>
             </CardFooter>
         </Card>
     )
