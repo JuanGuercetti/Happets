@@ -1,6 +1,6 @@
 import Item from "../components/Item"
 import { SimpleGrid, GridItem, Heading } from "@chakra-ui/react"
-import { getProducts } from "../asyncMock"
+import { getProductsByCategory } from "../asyncMock"
 import { useState, useEffect } from "react";
 
 export default function Collares() {
@@ -8,7 +8,7 @@ export default function Collares() {
 
     useEffect(() => {
         const fetchProducts = async () => {
-            const productsData = await getProducts();
+            const productsData = await getProductsByCategory("collares");
             setProducts(productsData);
         };
 

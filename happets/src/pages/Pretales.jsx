@@ -1,5 +1,41 @@
+import Item from "../components/Item"
+import { SimpleGrid, GridItem, Heading } from "@chakra-ui/react"
+import { getProductsByCategory } from "../asyncMock"
+import { useState, useEffect } from "react";
+
 export default function Pretales() {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const productsData = await getProductsByCategory("pretales");
+            setProducts(productsData);
+        };
+
+        fetchProducts();
+    }, []);
+    
     return (
-        <h1>Pretales</h1>
+        <SimpleGrid  
+            columns={3} 
+            spacing={10} 
+            bg="gray.50"
+            p="10px"
+            width='100%'>
+
+            <GridItem colSpan={3} width="100%">
+                <Heading size='xl' textAlign='center'>Pretales</Heading>
+            </GridItem>
+
+            { products && products.map(
+                product => (
+                    <Item 
+                        key={ product.id } 
+                        name={ product.name } 
+                        img={ product.img }
+                        description={ product.description }> 
+                    </Item>
+            ))}
+        </SimpleGrid>
     )
 }
