@@ -33,9 +33,9 @@ export default function Navbar() {
                 </NavLink>
             </HStack>
 
-            <Spacer/>
+            {/* <Spacer/>
 
-            <CartWidget/>
+            <CartWidget/> */}
         </Flex>
     )
 }
