@@ -9,6 +9,7 @@ lerna-debug.log*
 
 .env
 
+Nuevo documento de texto.txt
 node_modules
 dist
 dist-ssr
